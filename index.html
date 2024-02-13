@@ -47,11 +47,6 @@
 
             const url = urlInput.value.trim();
 
-            // Implement a robust URL validation using a regular expression
-            const regexp = /^(https?:\/\/)?www\.\w+\.[\w\-]{2,4}(\/\/[\w\-\.]+\*)*(?:[^\w\-_\.]+\w+$|(\?|&)[^ ]*)$/;
-            if (!regexp.test(url)) {
-                alert('Invalid URL. Please enter a valid URL starting with "http://" or "https://".');
-                return;
             }
 
             // Sanitize the URL to prevent potential redirection vulnerabilities
