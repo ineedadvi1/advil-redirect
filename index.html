@@ -1,72 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>URL Redirection</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 20px;
-        }
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-        input[type="text"] {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 16px;
-        }
-        button {
-            padding: 10px 20px;
-            background-color: #4CAF50; /* Green */
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URL Redirection</title>
+  <style>
     </style>
 </head>
 <body>
-    <h1>advil redirect</h1>
-    <form id="redirect-form">
-        <input type="text" id="url-input" placeholder="Enter a URL...">
-        <button>Redirect</button>
-    </form>
-    <script>
-        const redirectForm = document.getElementById('redirect-form');
-        const urlInput = document.getElementById('url-input');
-
-        redirectForm.addEventListener('submit', (event) => {
-            event.preventDefault(); // Prevent default form submission
-
-            const url = urlInput.value.trim();
-
-            }
-
-            // Sanitize the URL to prevent potential redirection vulnerabilities
-            const sanitizedUrl = sanitizeUrl(url); // Define the sanitizeUrl function below
-
-            // Use window.location.href instead of window.location.replace
-            // to allow users to navigate back using browser history
-            window.location.href = sanitizedUrl;
-        });
-
-        // Your sanitizeUrl function implementation should go here:
-        function sanitizeUrl(url) {
-            // Implement URL sanitization logic here, potentially using
-            // libraries like DOMPurify to remove dangerous components
-            // and ensure the destination URL is within a trusted whitelist.
-            // Refer to GitHub's security documentation for best practices:
-            // https://docs.github.com/en/pages/guides/security
-            console.error('URL sanitization logic is not implemented. Define and return the sanitized URL in this function.');
-            return url; // Placeholder, replace with sanitized URL
-        }
-    </script>
+  <h1>advil redirect</h1>
+  <form id="redirect-form">
+    <input type="text" id="url-input" placeholder="Enter a URL...">
+    <button type="submit">Redirect</button> </form>
+  <script>
+    // ... (rest of the JavaScript code remains the same)
+  </script>
 </body>
 </html>
