@@ -6,10 +6,10 @@ redirectForm.addEventListener('submit', (event) => {
 
     const url = urlInput.value.trim();
 
-    // Implement a robust URL validation using a regular expression
-    const regexp = /^(https?:\/\/)?www\.\w+\.[\w\-]{2,4}(\/\/[\w\-\.]+\*)*(?:[^\w\-_\.]+\w+$|(\?|&)[^ ]*)$/;
+    // Updated regular expression to support various protocols
+    const regexp = /^((http|https)\:\/\/)?[^\s]+\.[^\s]+$/;
     if (!regexp.test(url)) {
-        alert('Invalid URL. Please enter a valid URL starting with "http://" or "https://".');
+        alert('Invalid URL. Please enter a valid URL.');
         return;
     }
 
