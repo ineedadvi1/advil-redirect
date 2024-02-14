@@ -5,8 +5,8 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-image: linear-gradient(180deg, #000000 0%, #33093a 33%, #003377 66%);
-    animation: background-fade 9s ease-in-out infinite;
+    background-color: black; /* Initial black background */
+    animation: background-cycle 5s ease-in-out infinite;
 }
 
 .title {
@@ -37,28 +37,11 @@ button {
     font-size: 16px;
 }
 
-@keyframes background-fade {
-    0%, 100% {
-        background-position: 0%;
-        background-color: black;
+@keyframes background-cycle {
+    0%, 60% {
+        background-color: black; /* Black for 2 seconds */
     }
-    50% {
-        background-position: 100%;
-        background-color: purple;
+    70%, 100% {
+        background-color: #33093a; /* Dark purple for 1 second */
     }
-}
-
-.rounded-box {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #333;
-    text-align: center;
-    padding: 10px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
 }
