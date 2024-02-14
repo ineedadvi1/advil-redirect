@@ -19,6 +19,20 @@
         <a href="https://ineedadvi1.github.io/3kh0-lite.html/">3kh0 lite</a>
     </div>
 
+    <!-- Announcements button -->
+    <div class="announcements-button">
+        <button class="expand-button" onclick="expandAnnouncements()">Announcements</button>
+        <div class="expanded-content">
+            More stuff coming soon
+        </div>
+    </div>
+
     <script src="script.js"></script>
+    <script>
+        function expandAnnouncements() {
+            const expandedContent = document.querySelector('.expanded-content');
+            expandedContent.classList.toggle('expanded');
+        }
+    </script>
 </body>
 </html>
